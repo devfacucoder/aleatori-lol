@@ -1,13 +1,14 @@
 import React, { useContext } from "react";
 import Boton from "./Boton";
 import { ctxBuild } from "../App";
+const apiUrl = import.meta.env.VITE_URL_API;
 
 function Items({ pItem, id }) {
   const [_, setBuild, build] = useContext(ctxBuild);
 
   const changeItem = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/item");
+      const response = await fetch(apiUrl + "/api/item");
       if (response.ok) {
         const data = await response.json();
 

@@ -8,7 +8,7 @@ import Splashar from "./components/Splashart";
 import Builds from "./components/Builds";
 import Champ from "./components/Champ";
 import Items from "./components/Items";
-
+const apiUrl = import.meta.env.VITE_URL_API
 export const ctxBuild = createContext();
 function App() {
   const [champ, setChampion] = useState({
@@ -17,7 +17,7 @@ function App() {
   const [build, setBuild] = useState([]);
 
   const getAllBuildAndChampion = async () => {
-    const response = await fetch("http://localhost:3000/api/all");
+    const response = await fetch(apiUrl+"/api/all");
     if (response.ok) {
       const data = await response.json();
       setChampion(data.champion);

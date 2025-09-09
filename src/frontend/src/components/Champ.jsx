@@ -1,4 +1,5 @@
 import React, { useState, useContext } from "react";
+const apiUrl = import.meta.env.VITE_URL_API
 
 import Boton from "./Boton";
 import { ctxBuild } from "../App";
@@ -7,7 +8,7 @@ function Champ({ Champ }) {
 
   const [setChampion] = useContext(ctxBuild);
   const changeChamp = async () => {
-    const response = await fetch("http://localhost:3000/api/champion")
+    const response = await fetch(apiUrl+"/api/champion")
 
     if(response.ok){
         const data = await response.json()
