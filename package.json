@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
-    "frontend": "cd src/frontend && npm run dev",
+    "frontend": "npm --prefix src/frontend run dev",
     "full": "concurrently \"npm start\" \"npm run frontend\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
