@@ -12,7 +12,7 @@ const apiUrl = import.meta.env.VITE_URL_API
 export const ctxBuild = createContext();
 function App() {
   const [champ, setChampion] = useState({
-    img: "https://i.pinimg.com/736x/27/90/eb/2790ebb3362f19182cf862ac703f1754.jpg",
+    img: "https://ar.pinterest.com/pin/71635450320430180/",
   });
   const [build, setBuild] = useState([]);
 
