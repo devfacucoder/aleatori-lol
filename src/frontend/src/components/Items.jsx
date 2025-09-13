@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import Boton from "./Boton";
 import { ctxBuild } from "../App";
 const apiUrl = import.meta.env.VITE_URL_API;
+import { IoReload } from "react-icons/io5";
 
 function Items({ pItem, id }) {
   const [_, setBuild, build] = useContext(ctxBuild);
@@ -39,7 +40,9 @@ function Items({ pItem, id }) {
         />
       </div>
       <div>
-        <Boton fun={changeItem} text="Cambiar item" />
+        <button>
+          <IoReload />
+        </button>
       </div>
     </div>
   );
