@@ -39,9 +39,7 @@ function App() {
           <Champ pChamp={champ} />
           <Builds dataBuild={build} />
           <div className="flex flex-col gap-4  ">
-            <Boton />
-            <Boton />
-            <Boton />
+          
           </div>
         </div>
       </div>

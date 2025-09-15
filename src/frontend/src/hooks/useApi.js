@@ -43,9 +43,37 @@ export default function useApi() {
       return null;
     }
   };
+
+  const getListChamps = async () => {
+    try {
+      const response = await fetch(apiURl + "/api/listachamps");
+      if (response.ok) {
+        const data = await response.json();
+        return data;
+      }
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  };
+  const getChampByName = async (name) => {
+    try {
+      const response = await fetch(apiURl + "/api/champion/" + name);
+
+      if (response.ok) {
+        const data = response.json();
+        return data;
+      }
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  };
   return {
     getAleatoriOneItem,
     getAleatoriBuild,
     getAleatoriChamp,
+    getListChamps,
+    getChampByName,
   };
 }
