@@ -1,5 +1,4 @@
 import React from "react";
-import { IoReload } from "react-icons/io5";
 
 function Boton({ text, fun }) {
   return (
